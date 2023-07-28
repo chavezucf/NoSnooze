@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
+    @StateObject var alarmViewModel = AlarmViewModel()
 
     var body: some View {
         Group {
             if hasCompletedOnboarding {
-                HomeView()
+                HomeView(viewModel: alarmViewModel)
             } else {
                 OnboardingView(hasCompletedOnboarding: $hasCompletedOnboarding)
             }

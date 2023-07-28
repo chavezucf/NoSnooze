@@ -8,30 +8,36 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel: AlarmViewModel
     @State private var isAlarmViewActive = false // to present SetAlarmView
     @State private var isHelpViewActive = false // to push HelpSupportView
-
+    
     var body: some View {
-        VStack {
-            // Your home screen content here...
-
-            Button("Add/Edit Alarm") {
-                isAlarmViewActive = true
+        NavigationView {
+            VStack {
+                switch viewModel.alarmState {
+                case .noAlarm:
+                    NoAlarmState(viewModel: viewModel)
+                case .alarmSet(let alarm):
+                    AlarmSetState(viewModel: viewModel, alarm: alarm)
+                case .postAlarm(let date):
+                    PostAlarmState(postAlarmDate: date)
+                }
             }
-            .sheet(isPresented: $isAlarmViewActive) {
-                SetAlarmView()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isHelpViewActive = true
+                    }) {
+                        Image(systemName: "questionmark.circle")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                    }
+                    .fullScreenCover(isPresented: $isHelpViewActive) {
+                        HelpSupportView()
+                    }
+                }
             }
-
-            Button("Help & Support") {
-                isHelpViewActive = true
-            }
-            .fullScreenCover(isPresented: $isHelpViewActive) {
-                HelpSupportView()
-            }
-        }
-        .onAppear {
-            // Check if alarm is active, if yes, present AlarmActiveView
-            // This requires your alarm logic and is not shown here.
         }
     }
 }
@@ -39,6 +45,8 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        let viewModel = AlarmViewModel()
+        viewModel.addAlarm(Alarm(id: UUID(), time: Date().addingTimeInterval(60), sound: Sound(id: UUID(), name: "Sound 1", filename: "sound1"), isActive: true))
+        return HomeView(viewModel: viewModel)
     }
 }

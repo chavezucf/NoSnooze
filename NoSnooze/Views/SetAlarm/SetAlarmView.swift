@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct SetAlarmView: View {
+    @ObservedObject var viewModel: AlarmViewModel
+    @State private var alarmDate = Date()
+    @State private var alarmSound = Sound(id: UUID(), name: "Sound 1", filename: "sound1")
     @Environment(\.presentationMode) var presentationMode
-    
+
     var body: some View {
         VStack {
-            // Your Alarm Setting content here...
+            // Alarm date picker
+            DatePicker("Select Alarm Time", selection: $alarmDate, displayedComponents: [.hourAndMinute])
+            
+            // Sound picker goes here...
             
             Button("Save") {
-                // Save alarm and dismiss view
+                // Save alarm
+                let newAlarm = Alarm(id: UUID(), time: alarmDate, sound: alarmSound, isActive: true)
+                viewModel.addAlarm(newAlarm)
                 presentationMode.wrappedValue.dismiss()
             }
         }
@@ -26,8 +34,8 @@ struct SetAlarmView: View {
     }
 }
 
-struct AlarmSettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SetAlarmView()
-    }
-}
+//struct AlarmSettingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SetAlarmView()
+//    }
+//}
