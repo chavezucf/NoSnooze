@@ -1,5 +1,5 @@
 //
-//  AlarmActiveView.swift
+//  AlarmSettingView.swift
 //  NoSnooze
 //
 //  Created by Miguel Chavez on 7/28/23.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct AlarmActiveView: View {
+struct SetAlarmView: View {
     @Environment(\.presentationMode) var presentationMode
-
+    
     var body: some View {
         VStack {
-            // Your Alarm Active content here...
+            // Your Alarm Setting content here...
             
-            Button("Stop") {
-                // Stop alarm and dismiss view
+            Button("Save") {
+                // Save alarm and dismiss view
                 presentationMode.wrappedValue.dismiss()
             }
         }
@@ -26,8 +26,8 @@ struct AlarmActiveView: View {
     }
 }
 
-struct AlarmActiveView_Previews: PreviewProvider {
+struct AlarmSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        AlarmActiveView()
+        SetAlarmView()
     }
 }
