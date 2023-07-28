@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Sound {
+    var id: UUID
+    var name: String
+    var filename: String
+}

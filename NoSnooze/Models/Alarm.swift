@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Alarm {
+    var id: UUID
+    var time: Date
+    var sound: Sound
+    var isActive: Bool
+}

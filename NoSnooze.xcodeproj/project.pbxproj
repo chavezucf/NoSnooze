@@ -16,6 +16,12 @@
 		CF5F98232A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98222A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift */; };
 		CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98302A73CC6D006BAECA /* Alarm.swift */; };
 		CF5F98332A73CC78006BAECA /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98322A73CC78006BAECA /* Sound.swift */; };
+		CF5F98392A73D088006BAECA /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98382A73D088006BAECA /* AlarmViewModel.swift */; };
+		CF5F983B2A73D0A8006BAECA /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F983A2A73D0A8006BAECA /* SoundViewModel.swift */; };
+		CF5F983D2A73D0D8006BAECA /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F983C2A73D0D8006BAECA /* Date+Extension.swift */; };
+		CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F983E2A73D0FB006BAECA /* Color+Extension.swift */; };
+		CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98402A73D174006BAECA /* AlarmManager.swift */; };
+		CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98422A73D187006BAECA /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		CF5F98222A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CF5F98302A73CC6D006BAECA /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		CF5F98322A73CC78006BAECA /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		CF5F98382A73D088006BAECA /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
+		CF5F983A2A73D0A8006BAECA /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
+		CF5F983C2A73D0D8006BAECA /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CF5F983E2A73D0FB006BAECA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CF5F98402A73D174006BAECA /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		CF5F98422A73D187006BAECA /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,8 @@
 		CF5F98352A73CCB4006BAECA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CF5F98402A73D174006BAECA /* AlarmManager.swift */,
+				CF5F98422A73D187006BAECA /* SoundManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -162,6 +176,8 @@
 		CF5F98362A73CCC9006BAECA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CF5F983C2A73D0D8006BAECA /* Date+Extension.swift */,
+				CF5F983E2A73D0FB006BAECA /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -169,6 +185,8 @@
 		CF5F98372A73CCD4006BAECA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CF5F98382A73D088006BAECA /* AlarmViewModel.swift */,
+				CF5F983A2A73D0A8006BAECA /* SoundViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -307,6 +325,12 @@
 				CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */,
 				CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */,
 				CF5F98332A73CC78006BAECA /* Sound.swift in Sources */,
+				CF5F983D2A73D0D8006BAECA /* Date+Extension.swift in Sources */,
+				CF5F983B2A73D0A8006BAECA /* SoundViewModel.swift in Sources */,
+				CF5F98392A73D088006BAECA /* AlarmViewModel.swift in Sources */,
+				CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */,
+				CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */,
+				CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
