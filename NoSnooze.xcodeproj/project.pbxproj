@@ -14,6 +14,8 @@
 		CF5F98172A73C4DD006BAECA /* NoSnoozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98162A73C4DD006BAECA /* NoSnoozeTests.swift */; };
 		CF5F98212A73C4DD006BAECA /* NoSnoozeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98202A73C4DD006BAECA /* NoSnoozeUITests.swift */; };
 		CF5F98232A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98222A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift */; };
+		CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98302A73CC6D006BAECA /* Alarm.swift */; };
+		CF5F98332A73CC78006BAECA /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98322A73CC78006BAECA /* Sound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		CF5F981C2A73C4DD006BAECA /* NoSnoozeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoSnoozeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5F98202A73C4DD006BAECA /* NoSnoozeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeUITests.swift; sourceTree = "<group>"; };
 		CF5F98222A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF5F98302A73CC6D006BAECA /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		CF5F98322A73CC78006BAECA /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,11 @@
 			children = (
 				CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */,
 				CF5F98072A73C4DC006BAECA /* ContentView.swift */,
+				CF5F982F2A73CC5B006BAECA /* Models */,
+				CF5F98342A73CC83006BAECA /* Views */,
+				CF5F98372A73CCD4006BAECA /* ViewModels */,
+				CF5F98362A73CCC9006BAECA /* Extensions */,
+				CF5F98352A73CCB4006BAECA /* Utilities */,
 				CF5F98092A73C4DC006BAECA /* Assets.xcassets */,
 				CF5F980B2A73C4DC006BAECA /* Preview Content */,
 			);
@@ -125,6 +134,43 @@
 				CF5F98222A73C4DD006BAECA /* NoSnoozeUITestsLaunchTests.swift */,
 			);
 			path = NoSnoozeUITests;
+			sourceTree = "<group>";
+		};
+		CF5F982F2A73CC5B006BAECA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F98302A73CC6D006BAECA /* Alarm.swift */,
+				CF5F98322A73CC78006BAECA /* Sound.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF5F98342A73CC83006BAECA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF5F98352A73CCB4006BAECA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CF5F98362A73CCC9006BAECA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF5F98372A73CCD4006BAECA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +305,8 @@
 			files = (
 				CF5F98082A73C4DC006BAECA /* ContentView.swift in Sources */,
 				CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */,
+				CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */,
+				CF5F98332A73CC78006BAECA /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
