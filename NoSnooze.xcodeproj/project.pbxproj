@@ -22,6 +22,13 @@
 		CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F983E2A73D0FB006BAECA /* Color+Extension.swift */; };
 		CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98402A73D174006BAECA /* AlarmManager.swift */; };
 		CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98422A73D187006BAECA /* SoundManager.swift */; };
+		CF5F984A2A73D283006BAECA /* HelpSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98492A73D283006BAECA /* HelpSupportView.swift */; };
+		CF5F984C2A73D29F006BAECA /* AlarmActiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F984B2A73D29F006BAECA /* AlarmActiveView.swift */; };
+		CF5F984E2A73D2BF006BAECA /* AlarmSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F984D2A73D2BF006BAECA /* AlarmSettingView.swift */; };
+		CF5F98502A73D2D4006BAECA /* AlarmRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F984F2A73D2D4006BAECA /* AlarmRowView.swift */; };
+		CF5F98522A73D2E6006BAECA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98512A73D2E6006BAECA /* HomeView.swift */; };
+		CF5F98542A73D2FD006BAECA /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98532A73D2FD006BAECA /* OnboardingPageView.swift */; };
+		CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98552A73D310006BAECA /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +67,13 @@
 		CF5F983E2A73D0FB006BAECA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		CF5F98402A73D174006BAECA /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		CF5F98422A73D187006BAECA /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		CF5F98492A73D283006BAECA /* HelpSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSupportView.swift; sourceTree = "<group>"; };
+		CF5F984B2A73D29F006BAECA /* AlarmActiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmActiveView.swift; sourceTree = "<group>"; };
+		CF5F984D2A73D2BF006BAECA /* AlarmSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingView.swift; sourceTree = "<group>"; };
+		CF5F984F2A73D2D4006BAECA /* AlarmRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRowView.swift; sourceTree = "<group>"; };
+		CF5F98512A73D2E6006BAECA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CF5F98532A73D2FD006BAECA /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		CF5F98552A73D310006BAECA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +174,11 @@
 		CF5F98342A73CC83006BAECA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF5F98442A73D222006BAECA /* Onboarding */,
+				CF5F98452A73D249006BAECA /* Home */,
+				CF5F98482A73D26C006BAECA /* AlarmSetting */,
+				CF5F98472A73D260006BAECA /* AlarmActive */,
+				CF5F98462A73D254006BAECA /* HelpSupport */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +208,48 @@
 				CF5F983A2A73D0A8006BAECA /* SoundViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CF5F98442A73D222006BAECA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F98552A73D310006BAECA /* OnboardingView.swift */,
+				CF5F98532A73D2FD006BAECA /* OnboardingPageView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		CF5F98452A73D249006BAECA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F98512A73D2E6006BAECA /* HomeView.swift */,
+				CF5F984F2A73D2D4006BAECA /* AlarmRowView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF5F98462A73D254006BAECA /* HelpSupport */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F98492A73D283006BAECA /* HelpSupportView.swift */,
+			);
+			path = HelpSupport;
+			sourceTree = "<group>";
+		};
+		CF5F98472A73D260006BAECA /* AlarmActive */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F984B2A73D29F006BAECA /* AlarmActiveView.swift */,
+			);
+			path = AlarmActive;
+			sourceTree = "<group>";
+		};
+		CF5F98482A73D26C006BAECA /* AlarmSetting */ = {
+			isa = PBXGroup;
+			children = (
+				CF5F984D2A73D2BF006BAECA /* AlarmSettingView.swift */,
+			);
+			path = AlarmSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,16 +382,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5F984E2A73D2BF006BAECA /* AlarmSettingView.swift in Sources */,
 				CF5F98082A73C4DC006BAECA /* ContentView.swift in Sources */,
 				CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */,
+				CF5F98522A73D2E6006BAECA /* HomeView.swift in Sources */,
 				CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */,
 				CF5F98332A73CC78006BAECA /* Sound.swift in Sources */,
+				CF5F984C2A73D29F006BAECA /* AlarmActiveView.swift in Sources */,
 				CF5F983D2A73D0D8006BAECA /* Date+Extension.swift in Sources */,
 				CF5F983B2A73D0A8006BAECA /* SoundViewModel.swift in Sources */,
 				CF5F98392A73D088006BAECA /* AlarmViewModel.swift in Sources */,
 				CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */,
 				CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */,
 				CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */,
+				CF5F984A2A73D283006BAECA /* HelpSupportView.swift in Sources */,
+				CF5F98542A73D2FD006BAECA /* OnboardingPageView.swift in Sources */,
+				CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */,
+				CF5F98502A73D2D4006BAECA /* AlarmRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
