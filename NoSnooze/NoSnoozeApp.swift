@@ -13,7 +13,7 @@ struct NoSnoozeApp: App {
         WindowGroup {
             ContentView()
                 .preferredColorScheme(.dark) // Force dark mode
-                .accentColor(.red) // Set default button color
+                .accentColor(.appRed) // Set default button color
         }
     }
 }

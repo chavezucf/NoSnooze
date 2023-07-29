@@ -16,7 +16,7 @@ struct NoAlarmState: View {
             Button(action: {
                 viewModel.presentSetAlarmView = true
             }) {
-                Image(systemName: "plus")
+                Image(systemName: "plus") 
                     .resizable()
                     .frame(width: 40, height: 40)
             }
@@ -47,7 +47,7 @@ struct AlarmSetState: View {
                 Text("Edit")
             }
             .sheet(isPresented: $viewModel.presentSetAlarmView) {
-                SetAlarmView(viewModel: viewModel)
+                SetAlarmView(viewModel: viewModel, alarmToEdit: alarm)
             }
             .padding(.top, 20)
         }

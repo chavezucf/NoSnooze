@@ -10,5 +10,5 @@ import SwiftUI
 
 extension Color {
     static let appDarkBlack = Color("#111111")
-    static let appRed = Color("#FF0000")
+    static var appRed = Color("appRed")
 }
