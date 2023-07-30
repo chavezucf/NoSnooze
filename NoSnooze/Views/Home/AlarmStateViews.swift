@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NoAlarmState: View {
+struct NoAlarmStateView: View {
     @ObservedObject var viewModel: AlarmViewModel
 
     var body: some View {
@@ -30,7 +30,7 @@ struct NoAlarmState: View {
     }
 }
 
-struct AlarmSetState: View {
+struct AlarmSetStateView: View {
     @ObservedObject var viewModel: AlarmViewModel
     let alarm: Alarm
 
@@ -61,7 +61,7 @@ struct AlarmSetState: View {
     }
 }
 
-struct PostAlarmState: View {
+struct PostAlarmStateView: View {
     let postAlarmDate: Date
 
     var body: some View {
@@ -87,7 +87,8 @@ struct PostAlarmState: View {
 
 struct AlarmStates_Previews: PreviewProvider {
     static var now = Date()
-    static var alarm = Alarm(id: UUID(), time: now, sound: Sound(id: UUID(), name: "Morning", filename: "File"), isActive: true)
+    static var sound = TempData.sounds[0]
+    static var alarm = Alarm(id: UUID(), time: now, sound: sound, isActive: true)
     static var alarmState = AlarmState.noAlarm
     //static var alarmState = AlarmState.alarmSet(alarm)
     //static var alarmState = AlarmState.postAlarm(now)
@@ -96,11 +97,11 @@ struct AlarmStates_Previews: PreviewProvider {
         Group {
             switch alarmState {
             case .noAlarm:
-                NoAlarmState(viewModel: AlarmViewModel())
+                NoAlarmStateView(viewModel: AlarmViewModel())
             case .alarmSet(let alarm):
-                AlarmSetState(viewModel: AlarmViewModel(), alarm: alarm)
+                AlarmSetStateView(viewModel: AlarmViewModel(), alarm: alarm)
             case .postAlarm( _):
-                PostAlarmState(postAlarmDate: Date())
+                PostAlarmStateView(postAlarmDate: Date())
             }
         }
     }

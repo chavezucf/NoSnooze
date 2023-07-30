@@ -39,18 +39,20 @@ struct OnboardingView: View {
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
 
             HStack {
-//                Button(action: {
-//                    if selectedIndex > 0 { selectedIndex -= 1 }
-//                }) {
-//                    Text("Previous")
-//                        .foregroundColor(Color.white)
-//                        .padding()
-//                        .background(Color.appRed)
-//                        .cornerRadius(10)
-//                }
-//                .disabled(selectedIndex == 0)
-//
-//                Spacer()
+                Button(action: {
+                    if selectedIndex > 0 { selectedIndex -= 1 }
+                }) {
+                    Text("Previous")
+                        .foregroundColor(Color.appRed)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                    
+                }
+                .disabled(selectedIndex == 0)
+
+                Spacer()
 
                 if selectedIndex == onboardingData.count - 1 {
                     Button(action: {
@@ -60,6 +62,7 @@ struct OnboardingView: View {
                         Text("Start")
                             .foregroundColor(Color.white)
                             .padding()
+                            .frame(maxWidth: .infinity)
                             .background(Color.appRed)
                             .cornerRadius(10)
                     }
@@ -70,6 +73,7 @@ struct OnboardingView: View {
                         Text("Next")
                             .foregroundColor(Color.white)
                             .padding()
+                            .frame(maxWidth: .infinity)
                             .background(Color.appRed)
                             .cornerRadius(10)
                     }

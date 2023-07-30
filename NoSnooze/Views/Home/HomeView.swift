@@ -17,11 +17,11 @@ struct HomeView: View {
             VStack {
                 switch viewModel.alarmState {
                 case .noAlarm:
-                    NoAlarmState(viewModel: viewModel)
+                    NoAlarmStateView(viewModel: viewModel)
                 case .alarmSet(let alarm):
-                    AlarmSetState(viewModel: viewModel, alarm: alarm)
+                    AlarmSetStateView(viewModel: viewModel, alarm: alarm)
                 case .postAlarm(let date):
-                    PostAlarmState(postAlarmDate: date)
+                    PostAlarmStateView(postAlarmDate: date)
                 }
             }
             .toolbar {
@@ -29,7 +29,7 @@ struct HomeView: View {
                     Button(action: {
                         isHelpViewActive = true
                     }) {
-                        Image(systemName: "questionmark.circle")
+                        Image(systemName: "info.circle")
                             .resizable()
                             .frame(width: 15, height: 15)
                     }
@@ -46,7 +46,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AlarmViewModel()
-        viewModel.addAlarm(Alarm(id: UUID(), time: Date().addingTimeInterval(60), sound: Sound(id: UUID(), name: "Sound 1", filename: "sound1"), isActive: true))
+        viewModel.addAlarm(TempData.alarm)
         return HomeView(viewModel: viewModel)
     }
 }

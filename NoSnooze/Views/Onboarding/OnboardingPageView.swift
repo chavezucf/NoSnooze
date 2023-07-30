@@ -27,11 +27,9 @@ struct OnboardingPageView: View {
 
             Text(description)
                 .font(.title2)
-                .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding()
         }
-        .background(Color.appDarkBlack)
         .cornerRadius(10)
         .padding()
     }
@@ -44,7 +42,7 @@ struct OnboardingPageView_Previews: PreviewProvider {
             ("Customize", "clock", "Set your alarms with customized sounds."),
             ("Get Started", "location.north", "Get started now! Your perfect alarm setting experience is just a touch away.")
         ]
-    static let example = onboardingData[2]
+    static let example = onboardingData[0]
     static var previews: some View {
         OnboardingPageView(title: example.title, image: example.image, description: example.description)
     }
