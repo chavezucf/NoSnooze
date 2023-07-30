@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF54793E2A756E9E00B529F0 /* SetAlarmFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */; };
-		CF5479402A76758E00B529F0 /* SetAlarmButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */; };
-		CF5479422A76788800B529F0 /* SetAlarmHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */; };
+		CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SelectDateView.swift */; };
+		CF5479402A76758E00B529F0 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */; };
 		CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */; };
 		CF5F98082A73C4DC006BAECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98072A73C4DC006BAECA /* ContentView.swift */; };
 		CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5F98092A73C4DC006BAECA /* Assets.xcassets */; };
@@ -38,6 +37,8 @@
 		CF5F98602A76CE9B006BAECA /* ClassicAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */; };
 		CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF5F985E2A76CE9B006BAECA /* RetroGame.wav */; };
 		CF5F98632A76D4F3006BAECA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98622A76D4F3006BAECA /* NotificationManager.swift */; };
+		CF5F98652A76E94E006BAECA /* SoundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98642A76E94E006BAECA /* SoundPickerView.swift */; };
+		CF5F98672A76FDB7006BAECA /* SelectOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98662A76FDB7006BAECA /* SelectOptionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmFormView.swift; sourceTree = "<group>"; };
-		CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmButtonView.swift; sourceTree = "<group>"; };
-		CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmHeaderView.swift; sourceTree = "<group>"; };
+		CF54793D2A756E9E00B529F0 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
+		CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
 		CF5F98022A73C4DC006BAECA /* NoSnooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoSnooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeApp.swift; sourceTree = "<group>"; };
 		CF5F98072A73C4DC006BAECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +92,8 @@
 		CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClassicAlarm.wav; sourceTree = "<group>"; };
 		CF5F985E2A76CE9B006BAECA /* RetroGame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RetroGame.wav; sourceTree = "<group>"; };
 		CF5F98622A76D4F3006BAECA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		CF5F98642A76E94E006BAECA /* SoundPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickerView.swift; sourceTree = "<group>"; };
+		CF5F98662A76FDB7006BAECA /* SelectOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,9 +274,10 @@
 			isa = PBXGroup;
 			children = (
 				CF5F984D2A73D2BF006BAECA /* SetAlarmView.swift */,
-				CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */,
-				CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */,
-				CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */,
+				CF54793D2A756E9E00B529F0 /* SelectDateView.swift */,
+				CF5F98662A76FDB7006BAECA /* SelectOptionsView.swift */,
+				CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */,
+				CF5F98642A76E94E006BAECA /* SoundPickerView.swift */,
 			);
 			path = SetAlarm;
 			sourceTree = "<group>";
@@ -413,7 +416,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5F984E2A73D2BF006BAECA /* SetAlarmView.swift in Sources */,
+				CF5F98672A76FDB7006BAECA /* SelectOptionsView.swift in Sources */,
 				CF5F98082A73C4DC006BAECA /* ContentView.swift in Sources */,
+				CF5F98652A76E94E006BAECA /* SoundPickerView.swift in Sources */,
 				CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */,
 				CF5F98592A73E046006BAECA /* AlarmStateViews.swift in Sources */,
 				CF5F98522A73D2E6006BAECA /* HomeView.swift in Sources */,
@@ -423,17 +428,16 @@
 				CF5F983D2A73D0D8006BAECA /* Date+Extension.swift in Sources */,
 				CF5F983B2A73D0A8006BAECA /* SoundViewModel.swift in Sources */,
 				CF5F98392A73D088006BAECA /* AlarmViewModel.swift in Sources */,
-				CF5479402A76758E00B529F0 /* SetAlarmButtonView.swift in Sources */,
+				CF5479402A76758E00B529F0 /* DeleteButtonView.swift in Sources */,
 				CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */,
 				CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */,
 				CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */,
 				CF5F984A2A73D283006BAECA /* HelpSupportView.swift in Sources */,
 				CF5F98542A73D2FD006BAECA /* OnboardingPageView.swift in Sources */,
 				CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */,
-				CF54793E2A756E9E00B529F0 /* SetAlarmFormView.swift in Sources */,
+				CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */,
 				CF5F985B2A76A88E006BAECA /* TempData.swift in Sources */,
 				CF5F98502A73D2D4006BAECA /* TimerView.swift in Sources */,
-				CF5479422A76788800B529F0 /* SetAlarmHeaderView.swift in Sources */,
 				CF5F98632A76D4F3006BAECA /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

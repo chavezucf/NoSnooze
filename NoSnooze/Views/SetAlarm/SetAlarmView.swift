@@ -6,34 +6,61 @@
 //
 
 import SwiftUI
-
 struct SetAlarmView: View {
     @ObservedObject var viewModel: AlarmViewModel
     @State private var alarmDate: Date
     @State private var alarmSound: Sound
+    @State private var alarmLabel: String
     @Environment(\.presentationMode) var presentationMode
     var alarmToEdit: Alarm?
-
+    
     init(viewModel: AlarmViewModel, alarmToEdit: Alarm? = nil) {
         self.viewModel = viewModel
         _alarmDate = State(initialValue: alarmToEdit?.time ?? Date())
         _alarmSound = State(initialValue: alarmToEdit?.sound ?? TempData.sounds.last!)
+        _alarmLabel = State(initialValue: alarmToEdit?.label ?? "")
         self.alarmToEdit = alarmToEdit
     }
     
     var body: some View {
-        VStack {
-            SetAlarmHeaderView(alarmToEdit: alarmToEdit)
-            SelectDateView(alarmDate: $alarmDate)
-            SelectSoundView(alarmSound: $alarmSound)
-            SetAlarmButtonView(viewModel: viewModel, alarmDate: alarmDate, alarmSound: alarmSound, alarmToEdit: alarmToEdit)
+        NavigationView {
+            Form {
+                SelectDateView(alarmDate: $alarmDate)
+                SelectOptionsView(alarmLabel: $alarmLabel, alarmSound: $alarmSound)
+                DeleteButtonView(viewModel: viewModel, alarmToEdit: alarmToEdit)
+            }
+            .onAppear{
+                SoundManager.shared.stopSound()
+            }
+            .onDisappear {
+                SoundManager.shared.stopSound()
+            }
+            .navigationBarTitle(Text(alarmToEdit == nil ? "Set Alarm" : "Edit Alarm"), displayMode: .inline)
+            .navigationBarItems(leading:
+                                    Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Cancel")
+            },
+                                trailing:
+                                    Button(action: saveAlarm) {
+                Text("Save")
+            }
+            )
+            
         }
-        .highPriorityGesture(DragGesture().onEnded { _ in
-            presentationMode.wrappedValue.dismiss()
-        })
+    }
+    
+    func saveAlarm() {
+        presentationMode.wrappedValue.dismiss()
+        let newAlarm = Alarm(id: UUID(), time: alarmDate, sound: alarmSound, isActive: true, label: alarmLabel)
+        if let alarmToEdit = alarmToEdit {
+            viewModel.updateAlarm(alarmToEdit, with: newAlarm)
+        } else {
+            viewModel.addAlarm(newAlarm)
+        }
     }
 }
-
 
 
 struct AlarmSettingView_Previews: PreviewProvider {

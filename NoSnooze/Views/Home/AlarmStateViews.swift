@@ -12,7 +12,6 @@ struct NoAlarmStateView: View {
 
     var body: some View {
         VStack {
-            // Your UI elements here...
             Button(action: {
                 viewModel.presentSetAlarmView = true
             }) {
@@ -33,22 +32,11 @@ struct NoAlarmStateView: View {
 struct AlarmSetStateView: View {
     @ObservedObject var viewModel: AlarmViewModel
     let alarm: Alarm
-    
-    func testSound() {
-        let sound = alarm.sound
-        SoundManager.shared.playSound(sound: sound.filename)
-        
-    }
-    
-    
-    func stopSound() {
-        SoundManager.shared.stopSound()
-        
-    }
 
     var body: some View {
+        var alarmLabel = alarm.label != nil ? "Alarm Set: " + alarm.label! : "Alarm Set"
         VStack {
-            Text("Alarm Set")
+            Text(alarmLabel)
                 .font(.largeTitle)
             Text("Alarm Time: \(alarm.time, formatter: dateFormatter)")
                 .font(.title2)
@@ -77,7 +65,6 @@ struct PostAlarmStateView: View {
 
     var body: some View {
         VStack {
-            // Your UI elements here...
             Text("Post Alarm")
                 .font(.largeTitle)
             Text("Next Alarm can be set after: \(postAlarmDate, formatter: dateFormatter)")
@@ -99,7 +86,7 @@ struct PostAlarmStateView: View {
 struct AlarmStates_Previews: PreviewProvider {
     static var now = Date()
     static var sound = TempData.sounds[0]
-    static var alarm = Alarm(id: UUID(), time: now, sound: sound, isActive: true)
+    static var alarm = Alarm(id: UUID(), time: now, sound: sound, isActive: true, label: "Test")
     //static var alarmState = AlarmState.noAlarm
     static var alarmState = AlarmState.alarmSet(alarm)
     //static var alarmState = AlarmState.postAlarm(now)

@@ -15,5 +15,5 @@ struct TempData {
         Sound(id: UUID(), name: "Retro Game", filename: "RetroGame")
     ]
     static let alarm: Alarm = Alarm(id: UUID(), time: Date().addingTimeInterval(60), sound: sounds[0], isActive: true)
-    static let editAlarm: Alarm = Alarm(id: UUID(), time: Date().addingTimeInterval(120), sound: sounds[2], isActive: true)
+    static let editAlarm: Alarm = Alarm(id: UUID(), time: Date().addingTimeInterval(120), sound: sounds[0], isActive: true)
 }

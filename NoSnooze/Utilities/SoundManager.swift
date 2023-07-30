@@ -8,29 +8,42 @@
 import Foundation
 import AVFoundation
 
-class SoundManager {
-    
-    // Singleton instance
+class SoundManager: ObservableObject {
     static let shared = SoundManager()
     
     var audioPlayer: AVAudioPlayer?
     
+    @Published var isPlaying: Bool = false
+    
     private init() {}
     
-    func playSound(sound: String, type: String = "wav") {
-        if let path = Bundle.main.path(forResource: sound, ofType: type) {
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-                audioPlayer?.numberOfLoops = -1
-                audioPlayer?.play()
-            } catch {
-                print("Couldn't find the audio file")
-            }
+    func playSound(_ sound: String) {
+        guard let url = Bundle.main.url(forResource: sound, withExtension: "wav") else {
+            print("Couldn't find the audio file")
+            return
+        }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+            isPlaying = true
+        } catch {
+            print("Couldn't find the audio file")
         }
     }
-    
-    
+
     func stopSound() {
         audioPlayer?.stop()
+        audioPlayer = nil
+        isPlaying = false
+    }
+    
+    func togglePlayback() {
+        if isPlaying {
+            audioPlayer?.pause()
+            isPlaying = false
+        } else {
+            audioPlayer?.play()
+            isPlaying = true
+        }
     }
 }

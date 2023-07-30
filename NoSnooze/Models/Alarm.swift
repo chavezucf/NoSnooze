@@ -12,4 +12,5 @@ struct Alarm: Identifiable  {
     var time: Date
     var sound: Sound
     var isActive: Bool
+    var label: String?
 }
