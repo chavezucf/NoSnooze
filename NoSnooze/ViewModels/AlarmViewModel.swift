@@ -24,6 +24,7 @@ class AlarmViewModel: ObservableObject {
         alarms.append(alarm)
         alarmState = .alarmSet(alarm)
         updateNextAlarm()
+        AlarmManager.shared.scheduleAlarm(alarm)
     }
     
     func removeAlarm(_ alarm: Alarm) {
@@ -31,15 +32,16 @@ class AlarmViewModel: ObservableObject {
             alarms.remove(at: index)
             alarmState = .noAlarm
             updateNextAlarm()
+            AlarmManager.shared.removeAlarm()
         }
     }
     
     func updateAlarm(_ alarm: Alarm, with newAlarm: Alarm) {
         if let index = alarms.firstIndex(where: { $0.id == alarm.id }) {
-            // Replace the existing alarm with the new one
             alarms[index] = newAlarm
             alarmState = .alarmSet(newAlarm)
             updateNextAlarm()
+            AlarmManager.shared.scheduleAlarm(newAlarm, isReplace: true)
         }
     }
     

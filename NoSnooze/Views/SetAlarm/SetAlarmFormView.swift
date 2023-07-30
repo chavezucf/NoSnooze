@@ -36,6 +36,9 @@ struct SelectDateView: View {
                 .datePickerStyle(WheelDatePickerStyle())
                 .labelsHidden()
                 .accentColor(.appRed)
+                .onChange(of: alarmDate) { newValue in
+                    alarmDate = newValue.makeDateWithZeroSeconds()
+                }
         }
         .frame(maxWidth: .infinity)
         .padding(20)
@@ -47,7 +50,7 @@ struct SelectDateView: View {
 struct SelectSoundView_Previews: PreviewProvider {
     static var previews: some View {
         let sound = TempData.sounds[2]
-        //SelectDateView(alarmDate: .constant(Date()))
-        SelectSoundView(alarmSound: .constant(sound))
+        SelectDateView(alarmDate: .constant(Date()))
+        //SelectSoundView(alarmSound: .constant(sound))
     }
 }

@@ -34,6 +34,10 @@
 		CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98552A73D310006BAECA /* OnboardingView.swift */; };
 		CF5F98592A73E046006BAECA /* AlarmStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98582A73E046006BAECA /* AlarmStateViews.swift */; };
 		CF5F985B2A76A88E006BAECA /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F985A2A76A88E006BAECA /* TempData.swift */; };
+		CF5F985F2A76CE9B006BAECA /* GameWaveAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */; };
+		CF5F98602A76CE9B006BAECA /* ClassicAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */; };
+		CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF5F985E2A76CE9B006BAECA /* RetroGame.wav */; };
+		CF5F98632A76D4F3006BAECA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98622A76D4F3006BAECA /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		CF5F98552A73D310006BAECA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CF5F98582A73E046006BAECA /* AlarmStateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStateViews.swift; sourceTree = "<group>"; };
 		CF5F985A2A76A88E006BAECA /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
+		CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameWaveAlarm.wav; sourceTree = "<group>"; };
+		CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClassicAlarm.wav; sourceTree = "<group>"; };
+		CF5F985E2A76CE9B006BAECA /* RetroGame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RetroGame.wav; sourceTree = "<group>"; };
+		CF5F98622A76D4F3006BAECA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,9 @@
 				CF5F98362A73CCC9006BAECA /* Extensions */,
 				CF5F98352A73CCB4006BAECA /* Utilities */,
 				CF5F98092A73C4DC006BAECA /* Assets.xcassets */,
+				CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */,
+				CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */,
+				CF5F985E2A76CE9B006BAECA /* RetroGame.wav */,
 				CF5F980B2A73C4DC006BAECA /* Preview Content */,
 			);
 			path = NoSnooze;
@@ -199,6 +210,7 @@
 			children = (
 				CF5F98402A73D174006BAECA /* AlarmManager.swift */,
 				CF5F98422A73D187006BAECA /* SoundManager.swift */,
+				CF5F98622A76D4F3006BAECA /* NotificationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -372,7 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5F980D2A73C4DC006BAECA /* Preview Assets.xcassets in Resources */,
+				CF5F985F2A76CE9B006BAECA /* GameWaveAlarm.wav in Resources */,
 				CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */,
+				CF5F98602A76CE9B006BAECA /* ClassicAlarm.wav in Resources */,
+				CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +434,7 @@
 				CF5F985B2A76A88E006BAECA /* TempData.swift in Sources */,
 				CF5F98502A73D2D4006BAECA /* TimerView.swift in Sources */,
 				CF5479422A76788800B529F0 /* SetAlarmHeaderView.swift in Sources */,
+				CF5F98632A76D4F3006BAECA /* NotificationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

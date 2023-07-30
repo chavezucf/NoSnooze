@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct NoSnoozeApp: App {
+    init() {
+        NotificationManager.shared.requestNotificationAuthorization()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

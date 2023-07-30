@@ -9,7 +9,6 @@ import Foundation
 
 struct Sound: Identifiable, Hashable {
     var id: UUID
-    var idName: String
     var name: String
     var filename: String
 }

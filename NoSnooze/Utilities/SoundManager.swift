@@ -6,11 +6,31 @@
 //
 
 import Foundation
+import AVFoundation
 
 class SoundManager {
-    func playSound(_ sound: Sound) {
-        // logic to play sound
+    
+    // Singleton instance
+    static let shared = SoundManager()
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    private init() {}
+    
+    func playSound(sound: String, type: String = "wav") {
+        if let path = Bundle.main.path(forResource: sound, ofType: type) {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                audioPlayer?.numberOfLoops = -1
+                audioPlayer?.play()
+            } catch {
+                print("Couldn't find the audio file")
+            }
+        }
     }
     
-    // other methods for managing sounds
+    
+    func stopSound() {
+        audioPlayer?.stop()
+    }
 }
