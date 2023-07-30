@@ -16,6 +16,11 @@ struct SetAlarmView: View {
 
     var body: some View {
         VStack {
+            
+            Capsule()
+                .fill(Color.secondary)
+                .frame(width: 40, height: 3)
+                .padding(10)
             Text(alarmToEdit == nil ? "Set Alarm" : "Edit Alarm")
                 .font(.largeTitle)
                 .foregroundColor(.appRed)
@@ -34,9 +39,9 @@ struct SetAlarmView: View {
             VStack {
                 Text("Sound")
                 Picker("Select Sound", selection: $alarmSound.name) {
-                    Text("soundName1").tag("soundName1")
-                    Text("soundName2").tag("soundName2")
-                    Text("soundName3").tag("soundName3")
+                    Text("Fun Sound").tag("funSound")
+                    Text("Loud Sound").tag("loudSound")
+                    Text("Party").tag("party")
                 }
                 .pickerStyle(WheelPickerStyle())
                 .accentColor(Color.appRed)
@@ -46,28 +51,29 @@ struct SetAlarmView: View {
             .padding(20)
 
             Button(action: {
+                presentationMode.wrappedValue.dismiss()
                 let newAlarm = Alarm(id: UUID(), time: alarmDate, sound: alarmSound, isActive: true)
                 if let alarmToEdit = alarmToEdit {
                     viewModel.updateAlarm(alarmToEdit, with: newAlarm)
                 } else {
                     viewModel.addAlarm(newAlarm)
                 }
-                presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Save")
                     .foregroundColor(Color.white)
                     .padding()
+                    .frame(maxWidth: .infinity)
                     .background(Color.appRed)
-                    .cornerRadius(10)
+                    .cornerRadius(15)
             }
             .padding(.bottom, alarmToEdit == nil ? 30 : 0)
 
             if alarmToEdit != nil {
                 Button(action: {
+                    presentationMode.wrappedValue.dismiss()
                     if let alarmToEdit = alarmToEdit {
                         viewModel.removeAlarm(alarmToEdit)
                     }
-                    presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Delete")
                         .foregroundColor(Color.appRed)

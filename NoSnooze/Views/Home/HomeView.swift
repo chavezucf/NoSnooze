@@ -17,11 +17,11 @@ struct HomeView: View {
             VStack {
                 switch viewModel.alarmState {
                 case .noAlarm:
-                    NoAlarmState(viewModel: viewModel)
+                    NoAlarmStateView(viewModel: viewModel)
                 case .alarmSet(let alarm):
-                    AlarmSetState(viewModel: viewModel, alarm: alarm)
+                    AlarmSetStateView(viewModel: viewModel, alarm: alarm)
                 case .postAlarm(let date):
-                    PostAlarmState(postAlarmDate: date)
+                    PostAlarmStateView(postAlarmDate: date)
                 }
             }
             .toolbar {
@@ -29,7 +29,7 @@ struct HomeView: View {
                     Button(action: {
                         isHelpViewActive = true
                     }) {
-                        Image(systemName: "questionmark.circle")
+                        Image(systemName: "info.circle")
                             .resizable()
                             .frame(width: 15, height: 15)
                     }
