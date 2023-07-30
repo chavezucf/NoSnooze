@@ -87,7 +87,8 @@ struct PostAlarmStateView: View {
 
 struct AlarmStates_Previews: PreviewProvider {
     static var now = Date()
-    static var alarm = Alarm(id: UUID(), time: now, sound: Sound(id: UUID(), name: "Morning", filename: "File"), isActive: true)
+    static var sound = TempData.sounds[0]
+    static var alarm = Alarm(id: UUID(), time: now, sound: sound, isActive: true)
     static var alarmState = AlarmState.noAlarm
     //static var alarmState = AlarmState.alarmSet(alarm)
     //static var alarmState = AlarmState.postAlarm(now)

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF54793E2A756E9E00B529F0 /* SetAlarmFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */; };
+		CF5479402A76758E00B529F0 /* SetAlarmButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */; };
+		CF5479422A76788800B529F0 /* SetAlarmHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */; };
 		CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */; };
 		CF5F98082A73C4DC006BAECA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98072A73C4DC006BAECA /* ContentView.swift */; };
 		CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5F98092A73C4DC006BAECA /* Assets.xcassets */; };
@@ -31,6 +33,7 @@
 		CF5F98542A73D2FD006BAECA /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98532A73D2FD006BAECA /* OnboardingPageView.swift */; };
 		CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98552A73D310006BAECA /* OnboardingView.swift */; };
 		CF5F98592A73E046006BAECA /* AlarmStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98582A73E046006BAECA /* AlarmStateViews.swift */; };
+		CF5F985B2A76A88E006BAECA /* TempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F985A2A76A88E006BAECA /* TempData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmFormView.swift; sourceTree = "<group>"; };
+		CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmButtonView.swift; sourceTree = "<group>"; };
+		CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAlarmHeaderView.swift; sourceTree = "<group>"; };
 		CF5F98022A73C4DC006BAECA /* NoSnooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoSnooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeApp.swift; sourceTree = "<group>"; };
 		CF5F98072A73C4DC006BAECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +83,7 @@
 		CF5F98532A73D2FD006BAECA /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		CF5F98552A73D310006BAECA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CF5F98582A73E046006BAECA /* AlarmStateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStateViews.swift; sourceTree = "<group>"; };
+		CF5F985A2A76A88E006BAECA /* TempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 			children = (
 				CF5F98302A73CC6D006BAECA /* Alarm.swift */,
 				CF5F98322A73CC78006BAECA /* Sound.swift */,
+				CF5F985A2A76A88E006BAECA /* TempData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,7 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				CF5F984D2A73D2BF006BAECA /* SetAlarmView.swift */,
+				CF5479412A76788700B529F0 /* SetAlarmHeaderView.swift */,
 				CF54793D2A756E9E00B529F0 /* SetAlarmFormView.swift */,
+				CF54793F2A76758E00B529F0 /* SetAlarmButtonView.swift */,
 			);
 			path = SetAlarm;
 			sourceTree = "<group>";
@@ -399,6 +408,7 @@
 				CF5F983D2A73D0D8006BAECA /* Date+Extension.swift in Sources */,
 				CF5F983B2A73D0A8006BAECA /* SoundViewModel.swift in Sources */,
 				CF5F98392A73D088006BAECA /* AlarmViewModel.swift in Sources */,
+				CF5479402A76758E00B529F0 /* SetAlarmButtonView.swift in Sources */,
 				CF5F983F2A73D0FB006BAECA /* Color+Extension.swift in Sources */,
 				CF5F98412A73D174006BAECA /* AlarmManager.swift in Sources */,
 				CF5F98432A73D187006BAECA /* SoundManager.swift in Sources */,
@@ -406,7 +416,9 @@
 				CF5F98542A73D2FD006BAECA /* OnboardingPageView.swift in Sources */,
 				CF5F98562A73D310006BAECA /* OnboardingView.swift in Sources */,
 				CF54793E2A756E9E00B529F0 /* SetAlarmFormView.swift in Sources */,
+				CF5F985B2A76A88E006BAECA /* TempData.swift in Sources */,
 				CF5F98502A73D2D4006BAECA /* TimerView.swift in Sources */,
+				CF5479422A76788800B529F0 /* SetAlarmHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

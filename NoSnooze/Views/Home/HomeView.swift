@@ -46,7 +46,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = AlarmViewModel()
-        viewModel.addAlarm(Alarm(id: UUID(), time: Date().addingTimeInterval(60), sound: Sound(id: UUID(), name: "Sound 1", filename: "sound1"), isActive: true))
+        viewModel.addAlarm(TempData.alarm)
         return HomeView(viewModel: viewModel)
     }
 }
