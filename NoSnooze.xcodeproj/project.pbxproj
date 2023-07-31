@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CA64E7E2A7765D900E63E76 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA64E7B2A7765D900E63E76 /* logo2.png */; };
+		1CA64E7F2A7765D900E63E76 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA64E7C2A7765D900E63E76 /* logo1.png */; };
+		1CA64E802A7765D900E63E76 /* logo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CA64E7D2A7765D900E63E76 /* logo3.png */; };
 		CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SelectDateView.swift */; };
 		CF5479402A76758E00B529F0 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */; };
 		CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */; };
@@ -59,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CA64E7B2A7765D900E63E76 /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2.png; path = ../../../AI_Images/logo2.png; sourceTree = "<group>"; };
+		1CA64E7C2A7765D900E63E76 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo1.png; path = ../../../AI_Images/logo1.png; sourceTree = "<group>"; };
+		1CA64E7D2A7765D900E63E76 /* logo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo3.png; path = ../../../AI_Images/logo3.png; sourceTree = "<group>"; };
 		CF54793D2A756E9E00B529F0 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 		CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
 		CF5F98022A73C4DC006BAECA /* NoSnooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoSnooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +158,9 @@
 				CF5F98362A73CCC9006BAECA /* Extensions */,
 				CF5F98352A73CCB4006BAECA /* Utilities */,
 				CF5F98092A73C4DC006BAECA /* Assets.xcassets */,
+				1CA64E7C2A7765D900E63E76 /* logo1.png */,
+				1CA64E7B2A7765D900E63E76 /* logo2.png */,
+				1CA64E7D2A7765D900E63E76 /* logo3.png */,
 				CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */,
 				CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */,
 				CF5F985E2A76CE9B006BAECA /* RetroGame.wav */,
@@ -386,11 +395,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA64E802A7765D900E63E76 /* logo3.png in Resources */,
 				CF5F980D2A73C4DC006BAECA /* Preview Assets.xcassets in Resources */,
+				1CA64E7E2A7765D900E63E76 /* logo2.png in Resources */,
 				CF5F985F2A76CE9B006BAECA /* GameWaveAlarm.wav in Resources */,
 				CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */,
 				CF5F98602A76CE9B006BAECA /* ClassicAlarm.wav in Resources */,
 				CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */,
+				1CA64E7F2A7765D900E63E76 /* logo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
