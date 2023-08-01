@@ -10,7 +10,8 @@ import SwiftUI
 struct SelectDateView: View {
     @Binding var alarmDate: Date
     var body: some View {
-        Section(header: Text("Time")) {
+        Section(header: Text("Time")
+            .foregroundColor(.appRed)) {
             DatePicker("", selection: $alarmDate, displayedComponents: .hourAndMinute)
                 .datePickerStyle(WheelDatePickerStyle())
                 .labelsHidden()

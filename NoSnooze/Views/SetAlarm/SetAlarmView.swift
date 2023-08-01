@@ -48,7 +48,7 @@ struct SetAlarmView: View {
             }
             )
             
-        }
+        }.accentColor(.appBlue)
     }
     
     func saveAlarm() {

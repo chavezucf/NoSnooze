@@ -11,29 +11,30 @@ struct SelectOptionsView: View {
     @Binding var alarmLabel: String
     @Binding var alarmSound: Sound
     var body: some View {
-        Section(header: Text("Options")) {
-        HStack {
-            Text("Label")
-            Spacer()
-            TextField("Alarm", text: $alarmLabel)
-                .multilineTextAlignment(.trailing)
-                .padding(.leading)
-                .onChange(of: alarmLabel) { newValue in
-                    if newValue.count > 15 {
-                        alarmLabel = String(newValue.prefix(15))
-                    }
-                }
-        }
-        
-        NavigationLink(destination: SoundPickerView(selectedSound: $alarmSound)) {
+        Section(header: Text("Options")
+            .foregroundColor(.appRed)) {
             HStack {
-                Text("Sound")
+                Text("Label")
                 Spacer()
-                Text(alarmSound.name)
-                    .foregroundColor(.gray)
+                TextField("Alarm", text: $alarmLabel)
+                    .multilineTextAlignment(.trailing)
+                    .padding(.leading)
+                    .onChange(of: alarmLabel) { newValue in
+                        if newValue.count > 15 {
+                            alarmLabel = String(newValue.prefix(15))
+                        }
+                    }
+            }
+            
+            NavigationLink(destination: SoundPickerView(selectedSound: $alarmSound)) {
+                HStack {
+                    Text("Sound")
+                    Spacer()
+                    Text(alarmSound.name)
+                        .foregroundColor(.gray)
+                }
             }
         }
-    }
     }
 }
 

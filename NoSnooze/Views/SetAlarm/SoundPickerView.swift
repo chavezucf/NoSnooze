@@ -30,6 +30,7 @@ struct SoundPickerView: View {
                 }
             }
         }
+        .padding(10)
         .onDisappear {
             activeSound = nil
             SoundManager.shared.stopSound()
@@ -47,7 +48,7 @@ struct SoundCell: View {
         VStack {
             Text(sound.name)
                 .frame(maxWidth: .infinity, minHeight: 200)
-                .background(isActive ? Color.red : Color.gray)
+                .background(isActive ? Color.appRed : Color.gray)
                 .overlay(
                     Button(action: soundManager.togglePlayback) {
                         Image(systemName: soundManager.isPlaying ? "pause.circle.fill" : "play.circle.fill")
