@@ -24,7 +24,7 @@ struct OnboardingView: View {
                 Button(action: { hasCompletedOnboarding = true }) {
                     Image(systemName: "xmark")
                         .font(.title)
-                        .foregroundColor(.red)
+                        .foregroundColor(.appBlue)
                         .padding()
                 }
             }
@@ -43,7 +43,7 @@ struct OnboardingView: View {
                     if selectedIndex > 0 { selectedIndex -= 1 }
                 }) {
                     Text("Previous")
-                        .foregroundColor(Color.appRed)
+                        .foregroundColor(.appRed)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.white)
@@ -81,7 +81,6 @@ struct OnboardingView: View {
             }
             .padding()
         }
-        .background(Color.appDarkBlack)
     }
 }
 

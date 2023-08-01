@@ -23,10 +23,9 @@ struct DeleteButtonView: View {
             Section {
                 Button(action: deleteAlarm) {
                     Text("Delete")
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.appRed)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.appRed)
                         .cornerRadius(15)
                 }
             }
