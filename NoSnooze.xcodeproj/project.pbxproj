@@ -22,7 +22,6 @@
 		1CFF42F22A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F12A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav */; };
 		1CFF42F42A7FEAF900F24FFD /* FerryHorn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F32A7FEAF900F24FFD /* FerryHorn.wav */; };
 		1CFF42F62A7FEDFD00F24FFD /* CarAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F52A7FEDFD00F24FFD /* CarAlarm.wav */; };
-		1CFF42F82A7FFA6900F24FFD /* Desktop in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F72A7FFA6800F24FFD /* Desktop */; };
 		1CFF42FA2A7FFAF300F24FFD /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFF42F92A7FFAF300F24FFD /* OnboardingPageView.swift */; };
 		CF4556462A7DBBE400D957B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */; };
 		CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SelectDateView.swift */; };
@@ -92,7 +91,6 @@
 		1CFF42F12A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MilitaryTrumpetReveille.wav; sourceTree = "<group>"; };
 		1CFF42F32A7FEAF900F24FFD /* FerryHorn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FerryHorn.wav; sourceTree = "<group>"; };
 		1CFF42F52A7FEDFD00F24FFD /* CarAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CarAlarm.wav; sourceTree = "<group>"; };
-		1CFF42F72A7FFA6800F24FFD /* Desktop */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Desktop; path = ../../../Desktop; sourceTree = "<group>"; };
 		1CFF42F92A7FFAF300F24FFD /* OnboardingPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
 		CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CF54793D2A756E9E00B529F0 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		CF5F97F92A73C4DC006BAECA = {
 			isa = PBXGroup;
 			children = (
-				1CFF42F72A7FFA6800F24FFD /* Desktop */,
 				CF5F98042A73C4DC006BAECA /* NoSnooze */,
 				CF5F98152A73C4DD006BAECA /* NoSnoozeTests */,
 				CF5F981F2A73C4DD006BAECA /* NoSnoozeUITests */,
@@ -471,7 +468,6 @@
 				1CFF42F42A7FEAF900F24FFD /* FerryHorn.wav in Resources */,
 				CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */,
 				1CFF42DC2A7FE86700F24FFD /* EuroAlarm.wav in Resources */,
-				1CFF42F82A7FFA6900F24FFD /* Desktop in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
