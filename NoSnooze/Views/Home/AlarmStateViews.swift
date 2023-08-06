@@ -82,14 +82,42 @@ struct PostAlarmStateView: View {
     }
 }
 
+struct AlarmGoingOffStateView: View {
+    @ObservedObject var viewModel: AlarmViewModel
+    let alarm: Alarm
+
+    var body: some View {
+        VStack {
+            Image(systemName: "clock") // Change to your clock image
+                .resizable()
+                .frame(width: 100, height: 100)
+                .padding(.top, 50) 
+            Button(action: {
+                viewModel.removeAlarm(alarm)
+                SoundManager.shared.stopSound()
+            }) {
+                Text("Turn Off Alarm")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.appRed)
+                    .cornerRadius(10)
+            }
+            .padding(.top, 50)
+        }
+    }
+}
+
+
 
 struct AlarmStates_Previews: PreviewProvider {
     static var now = Date()
     static var sound = TempData.sounds[0]
     static var alarm = Alarm(id: UUID(), time: now, sound: sound, isActive: true, label: "Test")
     //static var alarmState = AlarmState.noAlarm
-    static var alarmState = AlarmState.alarmSet(alarm)
+    //static var alarmState = AlarmState.alarmSet(alarm)
     //static var alarmState = AlarmState.postAlarm(now)
+    static var alarmState = AlarmState.alarmGoingOff(alarm)
     
     static var previews: some View {
         Group {
@@ -100,6 +128,8 @@ struct AlarmStates_Previews: PreviewProvider {
                 AlarmSetStateView(viewModel: AlarmViewModel(), alarm: alarm)
             case .postAlarm( _):
                 PostAlarmStateView(postAlarmDate: Date())
+            case .alarmGoingOff(let alarm):
+                AlarmGoingOffStateView(viewModel: AlarmViewModel(), alarm: alarm)
             }
         }
     }

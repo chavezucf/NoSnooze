@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4556462A7DBBE400D957B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */; };
 		CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SelectDateView.swift */; };
 		CF5479402A76758E00B529F0 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */; };
 		CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */; };
@@ -39,6 +40,7 @@
 		CF5F98632A76D4F3006BAECA /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98622A76D4F3006BAECA /* NotificationManager.swift */; };
 		CF5F98652A76E94E006BAECA /* SoundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98642A76E94E006BAECA /* SoundPickerView.swift */; };
 		CF5F98672A76FDB7006BAECA /* SelectOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5F98662A76FDB7006BAECA /* SelectOptionsView.swift */; };
+		CFB7C5272A7DB07D0050F6AA /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB7C5262A7DB07D0050F6AA /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CF54793D2A756E9E00B529F0 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 		CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
+		CF54F2942A7DBA4000B5D6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF5F98022A73C4DC006BAECA /* NoSnooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoSnooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSnoozeApp.swift; sourceTree = "<group>"; };
 		CF5F98072A73C4DC006BAECA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		CF5F98622A76D4F3006BAECA /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		CF5F98642A76E94E006BAECA /* SoundPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPickerView.swift; sourceTree = "<group>"; };
 		CF5F98662A76FDB7006BAECA /* SelectOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionsView.swift; sourceTree = "<group>"; };
+		CFB7C5262A7DB07D0050F6AA /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,7 @@
 		CF5F98042A73C4DC006BAECA /* NoSnooze */ = {
 			isa = PBXGroup;
 			children = (
+				CF54F2942A7DBA4000B5D6D2 /* Info.plist */,
 				CF5F98052A73C4DC006BAECA /* NoSnoozeApp.swift */,
 				CF5F98072A73C4DC006BAECA /* ContentView.swift */,
 				CF5F982F2A73CC5B006BAECA /* Models */,
@@ -156,6 +162,7 @@
 				CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */,
 				CF5F985E2A76CE9B006BAECA /* RetroGame.wav */,
 				CF5F980B2A73C4DC006BAECA /* Preview Content */,
+				CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */,
 			);
 			path = NoSnooze;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 		CF5F98342A73CC83006BAECA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CFB7C5252A7DB04B0050F6AA /* LaunchScreen */,
 				CF5F98442A73D222006BAECA /* Onboarding */,
 				CF5F98452A73D249006BAECA /* Home */,
 				CF5F98572A73D5BE006BAECA /* SetAlarm */,
@@ -280,6 +288,14 @@
 				CF5F98642A76E94E006BAECA /* SoundPickerView.swift */,
 			);
 			path = SetAlarm;
+			sourceTree = "<group>";
+		};
+		CFB7C5252A7DB04B0050F6AA /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CFB7C5262A7DB07D0050F6AA /* LaunchScreenView.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4556462A7DBBE400D957B7 /* Launch Screen.storyboard in Resources */,
 				CF5F980D2A73C4DC006BAECA /* Preview Assets.xcassets in Resources */,
 				CF5F985F2A76CE9B006BAECA /* GameWaveAlarm.wav in Resources */,
 				CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */,
@@ -422,6 +439,7 @@
 				CF5F98062A73C4DC006BAECA /* NoSnoozeApp.swift in Sources */,
 				CF5F98592A73E046006BAECA /* AlarmStateViews.swift in Sources */,
 				CF5F98522A73D2E6006BAECA /* HomeView.swift in Sources */,
+				CFB7C5272A7DB07D0050F6AA /* LaunchScreenView.swift in Sources */,
 				CF5F98312A73CC6D006BAECA /* Alarm.swift in Sources */,
 				CF5F98332A73CC78006BAECA /* Sound.swift in Sources */,
 				CF5F984C2A73D29F006BAECA /* AlarmActiveView.swift in Sources */,
@@ -594,15 +612,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NoSnooze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2BSD3K249X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NoSnooze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -624,15 +644,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NoSnooze/Preview Content\"";
 				DEVELOPMENT_TEAM = 2BSD3K249X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NoSnooze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;

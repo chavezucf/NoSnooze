@@ -42,7 +42,7 @@ struct SetAlarmView: View {
             }) {
                 Text("Cancel")
             },
-                                trailing:
+                trailing:
                                     Button(action: saveAlarm) {
                 Text("Save")
             }

@@ -22,6 +22,8 @@ struct HomeView: View {
                     AlarmSetStateView(viewModel: viewModel, alarm: alarm)
                 case .postAlarm(let date):
                     PostAlarmStateView(postAlarmDate: date)
+                case .alarmGoingOff(let alarm):
+                    AlarmGoingOffStateView(viewModel: viewModel, alarm: alarm)
                 }
             }
             .toolbar {

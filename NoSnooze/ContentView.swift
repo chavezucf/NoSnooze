@@ -10,17 +10,25 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("hasCompletedOnboarding") var hasCompletedOnboarding: Bool = false
     @StateObject var alarmViewModel = AlarmViewModel()
+    @State private var showLaunchScreen = true
 
     var body: some View {
-        Group {
-            if hasCompletedOnboarding {
-                HomeView(viewModel: alarmViewModel)
+        ZStack {
+            if showLaunchScreen {
+                LaunchScreenView(showLaunchScreen: $showLaunchScreen)
             } else {
-                OnboardingView(hasCompletedOnboarding: $hasCompletedOnboarding)
+                Group {
+                    if hasCompletedOnboarding {
+                        HomeView(viewModel: alarmViewModel)
+                    } else {
+                        OnboardingView(hasCompletedOnboarding: $hasCompletedOnboarding)
+                    }
+                }
             }
         }
     }
 }
+
 
 
 struct ContentView_Previews: PreviewProvider {

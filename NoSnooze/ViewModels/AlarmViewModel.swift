@@ -11,10 +11,11 @@ enum AlarmState {
     case noAlarm
     case alarmSet(Alarm)
     case postAlarm(Date)
+    case alarmGoingOff(Alarm)
 }
 
 
-class AlarmViewModel: ObservableObject {
+class AlarmViewModel: ObservableObject, AlarmManagerDelegate {
     @Published var alarms = [Alarm]()
     @Published var nextAlarm: Alarm?
     @Published var alarmState: AlarmState = .noAlarm
@@ -24,6 +25,8 @@ class AlarmViewModel: ObservableObject {
         alarms.append(alarm)
         alarmState = .alarmSet(alarm)
         updateNextAlarm()
+        
+        AlarmManager.shared.delegate = self
         AlarmManager.shared.scheduleAlarm(alarm)
     }
     
@@ -45,7 +48,12 @@ class AlarmViewModel: ObservableObject {
         }
     }
     
+    func alarmDidGoOff(_ alarm: Alarm) {
+        alarmState = .noAlarm
+    }
+    
     private func updateNextAlarm() {
         nextAlarm = alarms.min(by: {$0.time < $1.time})
     }
+    
 }
