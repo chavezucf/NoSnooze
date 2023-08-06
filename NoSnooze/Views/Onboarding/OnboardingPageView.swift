@@ -9,41 +9,43 @@ import SwiftUI
 
 struct OnboardingPageView: View {
     var title: String
-    var image: String
+    var imageName: String // Name of the SF Symbol
     var description: String
 
     var body: some View {
-        VStack {
-            Image(systemName: image) // use your custom image name here
+        VStack(spacing: 20) {
+            Image(systemName: imageName) // Set the SF Symbol here
                 .resizable()
-                .scaledToFit()
-                .foregroundColor(.appRed)
-                .font(Font.title.weight(.ultraLight))
-                .padding(100)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 120, height: 120) // Adjust the size of the image
+                .foregroundColor(Color.appBlue)
 
             Text(title)
-                .font(.largeTitle)
-                .foregroundColor(.appRed)
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Color.appOrange)
+                .multilineTextAlignment(.center)
 
             Text(description)
-                .font(.title2)
                 .multilineTextAlignment(.center)
-                .padding()
+                .foregroundColor(.gray)
+                .padding(.horizontal, 30) // Adjust the horizontal padding
+
+            Spacer()
         }
-        .cornerRadius(10)
-        .padding()
+        .padding() // Add overall padding to the entire view
     }
 }
 
 
 struct OnboardingPageView_Previews: PreviewProvider {
-    static let onboardingData: [(title: String, image: String, description: String)] = [
-            ("Welcome", "book", "Discover a new way of setting alarms. Simple, intuitive, and easy to use."),
-            ("Customize", "clock", "Set your alarms with customized sounds."),
-            ("Get Started", "location.north", "Get started now! Your perfect alarm setting experience is just a touch away.")
-        ]
-    static let example = onboardingData[0]
+    static let example = (
+        title: "Welcome",
+        imageName: "sunrise.fill",
+        description: "Discover a new way of setting alarms. Simple, intuitive, and easy to use."
+    )
+
     static var previews: some View {
-        OnboardingPageView(title: example.title, image: example.image, description: example.description)
+        OnboardingPageView(title: example.title, imageName: example.imageName, description: example.description)
     }
 }

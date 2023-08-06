@@ -11,14 +11,14 @@ struct OnboardingView: View {
     @State private var selectedIndex = 0
     @Binding var hasCompletedOnboarding: Bool
 
-    let onboardingData: [(title: String, image: String, description: String)] = [
-        ("Welcome", "book", "Discover a new way of setting alarms. Simple, intuitive, and easy to use."),
-        ("Customize", "clock", "Set your alarms with customized sounds."),
-        ("Get Started", "location.north", "Get started now! Your perfect alarm setting experience is just a touch away.")
+    let onboardingData: [(title: String, imageName: String, description: String)] = [
+        ("Rise and Shine with NoSnooze!", "sunrise.fill", "Start your day like a champion! NoSnooze helps you break free from the snooze trap and embrace energizing mornings. Welcome to a world of productive routines and renewed enthusiasm. Let's conquer the day together!"),
+        ("Personalize Your Wake-Up Ritual", "alarm.fill", "Your mornings, your way! Customize alarm with soothing sounds and inspiring titles. Wake up with purpose and positivity. Unleash your creativity and seize the day!"),
+        ("Your Journey Begins Now!", "person.3.fill", "You're part of a vibrant community of achievers! NoSnooze empowers you to unlock your full potential. Embrace the challenge, seize opportunities, and build a brighter future, one morning at a time.")
     ]
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) { // Adjust overall vertical spacing
             HStack {
                 Spacer()
                 Button(action: { hasCompletedOnboarding = true }) {
@@ -28,15 +28,17 @@ struct OnboardingView: View {
                         .padding()
                 }
             }
+            .padding(.top, 10) // Add top padding to the close button
+
             TabView(selection: $selectedIndex) {
                 ForEach(onboardingData.indices, id: \.self) { index in
-                    OnboardingPageView(title: onboardingData[index].title, image: onboardingData[index].image, description: onboardingData[index].description)
+                    OnboardingPageView(title: onboardingData[index].title, imageName: onboardingData[index].imageName, description: onboardingData[index].description)
                         .tag(index)
-                        .padding()
                 }
             }
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            .padding(.bottom, 20) // Add bottom padding to the TabView
 
             HStack {
                 Button(action: {
@@ -79,8 +81,10 @@ struct OnboardingView: View {
                     }
                 }
             }
-            .padding()
+            .padding(.horizontal, 20) // Adjust the horizontal padding
+            .padding(.bottom, 10) // Add bottom padding to the buttons
         }
+        .padding(.vertical, 30) // Add vertical padding to the entire view
     }
 }
 
