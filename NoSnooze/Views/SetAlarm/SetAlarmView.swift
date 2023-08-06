@@ -54,10 +54,12 @@ struct SetAlarmView: View {
     func saveAlarm() {
         presentationMode.wrappedValue.dismiss()
         let newAlarm = Alarm(id: UUID(), time: alarmDate, sound: alarmSound, isActive: true, label: alarmLabel)
-        if let alarmToEdit = alarmToEdit {
-            viewModel.updateAlarm(alarmToEdit, with: newAlarm)
-        } else {
-            viewModel.addAlarm(newAlarm)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if let alarmToEdit = alarmToEdit {
+                viewModel.updateAlarm(alarmToEdit, with: newAlarm)
+            } else {
+                viewModel.addAlarm(newAlarm)
+            }
         }
     }
 }

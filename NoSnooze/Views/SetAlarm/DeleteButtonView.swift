@@ -11,10 +11,13 @@ struct DeleteButtonView: View {
     @ObservedObject var viewModel: AlarmViewModel
     @Environment(\.presentationMode) var presentationMode
     @State var alarmToEdit: Alarm?
+    
     func deleteAlarm() {
-        presentationMode.wrappedValue.dismiss()
         if let alarmToEdit = alarmToEdit {
-            viewModel.removeAlarm(alarmToEdit)
+            presentationMode.wrappedValue.dismiss()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                viewModel.removeAlarm(alarmToEdit)
+            }
         }
     }
     
