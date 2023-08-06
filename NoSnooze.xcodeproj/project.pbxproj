@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CFF42DC2A7FE86700F24FFD /* EuroAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42D72A7FE86600F24FFD /* EuroAlarm.wav */; };
+		1CFF42DD2A7FE86700F24FFD /* FireAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42D82A7FE86600F24FFD /* FireAlarm.wav */; };
+		1CFF42DF2A7FE86700F24FFD /* AlarmMashup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42DA2A7FE86700F24FFD /* AlarmMashup.wav */; };
+		1CFF42E02A7FE86700F24FFD /* ElectronicAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42DB2A7FE86700F24FFD /* ElectronicAlarm.wav */; };
+		1CFF42E22A7FE8E100F24FFD /* SpaceMachine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42E12A7FE8E100F24FFD /* SpaceMachine.wav */; };
+		1CFF42E42A7FE8FD00F24FFD /* FuturisticAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42E32A7FE8FD00F24FFD /* FuturisticAlarm.wav */; };
+		1CFF42E62A7FE92500F24FFD /* MilitaryAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42E52A7FE92500F24FFD /* MilitaryAlarm.wav */; };
+		1CFF42E82A7FE93300F24FFD /* AlienAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42E72A7FE93300F24FFD /* AlienAlarm.wav */; };
+		1CFF42EA2A7FE94400F24FFD /* AlarmClockBell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42E92A7FE94400F24FFD /* AlarmClockBell.wav */; };
+		1CFF42EC2A7FEA6C00F24FFD /* MarchingAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42EB2A7FEA6C00F24FFD /* MarchingAlarm.wav */; };
+		1CFF42EE2A7FEA9300F24FFD /* DrumAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42ED2A7FEA9300F24FFD /* DrumAlarm.wav */; };
+		1CFF42F02A7FEAA700F24FFD /* TrumpetAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42EF2A7FEAA700F24FFD /* TrumpetAlarm.wav */; };
+		1CFF42F22A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F12A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav */; };
+		1CFF42F42A7FEAF900F24FFD /* FerryHorn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F32A7FEAF900F24FFD /* FerryHorn.wav */; };
+		1CFF42F62A7FEDFD00F24FFD /* CarAlarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1CFF42F52A7FEDFD00F24FFD /* CarAlarm.wav */; };
 		CF4556462A7DBBE400D957B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */; };
 		CF54793E2A756E9E00B529F0 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793D2A756E9E00B529F0 /* SelectDateView.swift */; };
 		CF5479402A76758E00B529F0 /* DeleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */; };
@@ -61,6 +76,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CFF42D72A7FE86600F24FFD /* EuroAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = EuroAlarm.wav; sourceTree = "<group>"; };
+		1CFF42D82A7FE86600F24FFD /* FireAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FireAlarm.wav; sourceTree = "<group>"; };
+		1CFF42DA2A7FE86700F24FFD /* AlarmMashup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlarmMashup.wav; sourceTree = "<group>"; };
+		1CFF42DB2A7FE86700F24FFD /* ElectronicAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ElectronicAlarm.wav; sourceTree = "<group>"; };
+		1CFF42E12A7FE8E100F24FFD /* SpaceMachine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SpaceMachine.wav; sourceTree = "<group>"; };
+		1CFF42E32A7FE8FD00F24FFD /* FuturisticAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FuturisticAlarm.wav; sourceTree = "<group>"; };
+		1CFF42E52A7FE92500F24FFD /* MilitaryAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MilitaryAlarm.wav; sourceTree = "<group>"; };
+		1CFF42E72A7FE93300F24FFD /* AlienAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlienAlarm.wav; sourceTree = "<group>"; };
+		1CFF42E92A7FE94400F24FFD /* AlarmClockBell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AlarmClockBell.wav; sourceTree = "<group>"; };
+		1CFF42EB2A7FEA6C00F24FFD /* MarchingAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MarchingAlarm.wav; sourceTree = "<group>"; };
+		1CFF42ED2A7FEA9300F24FFD /* DrumAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = DrumAlarm.wav; sourceTree = "<group>"; };
+		1CFF42EF2A7FEAA700F24FFD /* TrumpetAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TrumpetAlarm.wav; sourceTree = "<group>"; };
+		1CFF42F12A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MilitaryTrumpetReveille.wav; sourceTree = "<group>"; };
+		1CFF42F32A7FEAF900F24FFD /* FerryHorn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FerryHorn.wav; sourceTree = "<group>"; };
+		1CFF42F52A7FEDFD00F24FFD /* CarAlarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CarAlarm.wav; sourceTree = "<group>"; };
 		CF4556452A7DBBE400D957B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CF54793D2A756E9E00B529F0 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 		CF54793F2A76758E00B529F0 /* DeleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonView.swift; sourceTree = "<group>"; };
@@ -158,6 +188,21 @@
 				CF5F98362A73CCC9006BAECA /* Extensions */,
 				CF5F98352A73CCB4006BAECA /* Utilities */,
 				CF5F98092A73C4DC006BAECA /* Assets.xcassets */,
+				1CFF42F52A7FEDFD00F24FFD /* CarAlarm.wav */,
+				1CFF42DA2A7FE86700F24FFD /* AlarmMashup.wav */,
+				1CFF42E12A7FE8E100F24FFD /* SpaceMachine.wav */,
+				1CFF42EB2A7FEA6C00F24FFD /* MarchingAlarm.wav */,
+				1CFF42EF2A7FEAA700F24FFD /* TrumpetAlarm.wav */,
+				1CFF42F32A7FEAF900F24FFD /* FerryHorn.wav */,
+				1CFF42F12A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav */,
+				1CFF42ED2A7FEA9300F24FFD /* DrumAlarm.wav */,
+				1CFF42E92A7FE94400F24FFD /* AlarmClockBell.wav */,
+				1CFF42E72A7FE93300F24FFD /* AlienAlarm.wav */,
+				1CFF42E52A7FE92500F24FFD /* MilitaryAlarm.wav */,
+				1CFF42E32A7FE8FD00F24FFD /* FuturisticAlarm.wav */,
+				1CFF42D72A7FE86600F24FFD /* EuroAlarm.wav */,
+				1CFF42D82A7FE86600F24FFD /* FireAlarm.wav */,
+				1CFF42DB2A7FE86700F24FFD /* ElectronicAlarm.wav */,
 				CF5F985D2A76CE9B006BAECA /* ClassicAlarm.wav */,
 				CF5F985C2A76CE9B006BAECA /* GameWaveAlarm.wav */,
 				CF5F985E2A76CE9B006BAECA /* RetroGame.wav */,
@@ -402,12 +447,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFF42E02A7FE86700F24FFD /* ElectronicAlarm.wav in Resources */,
+				1CFF42E82A7FE93300F24FFD /* AlienAlarm.wav in Resources */,
+				1CFF42EC2A7FEA6C00F24FFD /* MarchingAlarm.wav in Resources */,
 				CF4556462A7DBBE400D957B7 /* Launch Screen.storyboard in Resources */,
+				1CFF42F22A7FEAD700F24FFD /* MilitaryTrumpetReveille.wav in Resources */,
+				1CFF42E62A7FE92500F24FFD /* MilitaryAlarm.wav in Resources */,
+				1CFF42DD2A7FE86700F24FFD /* FireAlarm.wav in Resources */,
 				CF5F980D2A73C4DC006BAECA /* Preview Assets.xcassets in Resources */,
+				1CFF42EA2A7FE94400F24FFD /* AlarmClockBell.wav in Resources */,
+				1CFF42E22A7FE8E100F24FFD /* SpaceMachine.wav in Resources */,
+				1CFF42E42A7FE8FD00F24FFD /* FuturisticAlarm.wav in Resources */,
+				1CFF42F62A7FEDFD00F24FFD /* CarAlarm.wav in Resources */,
 				CF5F985F2A76CE9B006BAECA /* GameWaveAlarm.wav in Resources */,
+				1CFF42F02A7FEAA700F24FFD /* TrumpetAlarm.wav in Resources */,
+				1CFF42DF2A7FE86700F24FFD /* AlarmMashup.wav in Resources */,
+				1CFF42EE2A7FEA9300F24FFD /* DrumAlarm.wav in Resources */,
 				CF5F980A2A73C4DC006BAECA /* Assets.xcassets in Resources */,
 				CF5F98602A76CE9B006BAECA /* ClassicAlarm.wav in Resources */,
+				1CFF42F42A7FEAF900F24FFD /* FerryHorn.wav in Resources */,
 				CF5F98612A76CE9B006BAECA /* RetroGame.wav in Resources */,
+				1CFF42DC2A7FE86700F24FFD /* EuroAlarm.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

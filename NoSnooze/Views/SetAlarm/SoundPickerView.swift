@@ -16,17 +16,19 @@ struct SoundPickerView: View {
     }
 
     var body: some View {
-        VStack {
-            LazyVGrid(columns: Array(repeating: .init(), count: 2)) {
-                ForEach(TempData.sounds) { sound in
-                    SoundCell(sound: sound, isActive: sound == activeSound)
-                        .onTapGesture {
-                            if activeSound != sound {
-                                SoundManager.shared.stopSound()
+        ScrollView {
+            VStack {
+                LazyVGrid(columns: Array(repeating: .init(), count: 2)) {
+                    ForEach(TempData.sounds) { sound in
+                        SoundCell(sound: sound, isActive: sound == activeSound)
+                            .onTapGesture {
+                                if activeSound != sound {
+                                    SoundManager.shared.stopSound()
+                                }
+                                activeSound = sound
+                                selectedSound = sound
                             }
-                            activeSound = sound
-                            selectedSound = sound
-                        }
+                    }
                 }
             }
         }
